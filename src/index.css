@@ -1,0 +1,209 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background: rgb(0, 0, 0);
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  left: 60%;
+  top: 10%;
+}
+
+
+.letters-guesser {
+  position: absolute;
+  height: 100%;
+  padding: 10px 10px;
+  top: 45%;
+}
+
+.letters-guessed {
+  position: absolute;
+  height: 100%;
+  padding: 10px 10px;
+  top: 500px;
+  left: 45%;
+}
+
+.restart-button {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 5px solid #4caf50;
+  transition-duration: 0.2s;
+  margin: 30px;
+  width: 200px;
+  font-weight: bold;
+  left: 12%;
+  top: 64%;
+}
+
+.restart-button:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.square-button {
+  background: rgb(255, 255, 255);
+  border: 5px solid rgb(151, 0, 0);
+  float: left;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 56px;
+  margin-right: 3px;
+  margin-top: 1px;
+  border-radius: 8px;
+  justify-content: center;
+  width: 52px;
+  transition-duration: 0.2s;
+  padding: 10px 10px;
+}
+
+.square-button:hover {
+  background-color: #999999;
+}
+
+.square-button:focus {
+  outline: none;
+}
+
+.square-button::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.square {
+  background: rgb(255, 255, 255);
+  border: 5px solid rgb(151, 0, 0);
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 56px;
+  margin-right: 3px;
+  margin-top: 1px;
+  border-radius: 8px;
+  justify-content: center;
+  width: 52px;
+  right: 60%;
+  padding: 10px 10px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.answer-box {
+  position: relative;
+  padding: 10px 10px;
+  left: 15%;
+  height: 100%;
+}
+
+.guessed-title {
+  position: absolute;
+  right: 35%;
+  top: 58%;
+}
+
+.letters {
+  position: relative;
+  left: 500px;
+  top: 350px;
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+
+span {
+  position: relative;
+  /* left: 50%;
+  top: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: block;
+  color: rgb(151, 0, 0);
+  font-size: 124px;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+
+span::before {
+  content: "HANGMAN";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+span::after {
+  content: "HANGMAN";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0px;
+  transition: 1s;
+}
+
+span:hover:before {
+  top: 10px;
+  left: 10px;
+}
+
+span:hover:after {
+  top: -10px;
+  left: -10px;
+}
